@@ -1,0 +1,30 @@
+<input type="text" id="input" onkeyup="check(event)">
+<div class="container">
+   <h1>one</h1>
+   <h1>two</h1>
+   <h1>three</h1>
+   <h1>four</h1>
+   <h1>five</h1>
+   <h1>six</h1>
+   <h1>seven</h1>
+
+</div>
+<script>
+ var enteredvalue=""
+ var in1= document.querySelector(".container")
+ var in2= in1.querySelectorAll("h1")
+ function check(event){
+   enteredvalue=event.target.value
+
+ for(i=0;i<in2.length;i++){
+  if( in2[i].textContent.indexOf(enteredvalue) <0)
+  {
+   in2[i].style.display="none"
+  }
+  else{
+   in2[i].style.display="block"
+  }
+}
+ }
+
+</script>
